@@ -71,7 +71,11 @@ Next, can you find difference in recursion exit condition ? Tail call recursion 
 
 In the tail call codes, **_k_** is answer until previous recursion call and **_k+n_** is the answer in current call.
 
-> __The first step in functional programming is to design proper returning value.__
+One more thing, in functional programming paradigm it passes a function as a parameter when it calls another function. Given **sumTail(n-1, n + k)** we passe **+** operator as a function.
+
+ 
+
+>  __The first step in functional programming is to design proper returning value.__
 
 ----------
 #### **About me**
