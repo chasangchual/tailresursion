@@ -10,7 +10,7 @@ Once we open the door way to the functional programming, the first rabbit you me
 >Wiki says that In computer science, a tail call is a subroutine call performed as the final action of a procedure. If a tail call might lead to the same subroutine being called again later in the call chain, the subroutine is said to be tail-recursive, which is a special case of recursion. Tail recursion (or tail-end recursion) is particularly useful, and often easy to handle in implementations.
 https://en.wikipedia.org/wiki/Tail_call
 
-So, now you have a clear definition on Tail Call ? We are Java programmers. Give me Java code.
+So, now you have a clear definition on Tail Call ? We are Java programmers. Give me Java codes.
 
 ###**Codes**
 
@@ -26,7 +26,7 @@ public static Long sum(Integer n) {
 	else return n + sum(n-1) ;
 }
 ```
-Look OK for now. Do you know what is sum(10000) ? Let's get my new method work to answer it. 
+Looks OK for now. Do you know what is sum(10000) ? Let's get my new method work to answer it. 
 
 ```
 Exception in thread "main" java.lang.StackOverflowError
@@ -39,7 +39,7 @@ Exception in thread "main" java.lang.StackOverflowError
 	at com.surefor.functional.HelloTailCall.sum(HelloTailCall.java:9)
 	at com.surefor.functional.HelloTailCall.sum(HelloTailCall.java:9)
 ```
-Hmm.. It died with **sjava.lang.StackOverflowError** actually as expected. But no worries, it is time to dive deeper. Let me share another method to do same thing but run with tail call recursion.
+Hmm.. It died with **sjava.lang.StackOverflowError** actually as expected. But no worries, it is time to dive deeper. Let me share another methods to do same thing but run with tail call recursion.
 
 ```java
     public static Long sumTail(Integer n) {
@@ -55,7 +55,7 @@ Hmm.. It died with **sjava.lang.StackOverflowError** actually as expected. But n
 System.out.println(HelloTailCall.sumTail(10000)) ;
 50005000
 ```
-Now we got the answer. You could say So What, I can read Java code but it does not touch engineer's brain.  Probably there are tens of pages to explain how it work and how they are different. Too much, right ? 
+This time we got the answer. You could say that So what, I can read Java code but it does not touch engineer's brain.  Probably there are tens of pages to explain how it works and how they are different. Too much, right ? 
 
 ###**Explained**
 I would like say that in here, just focus on recursion exit condition. Meaning what you return. Every magic comes from **what you return**.
